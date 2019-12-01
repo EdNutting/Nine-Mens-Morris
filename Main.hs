@@ -26,13 +26,13 @@ endGame (p, b) = putStrLn (show p ++ " wins!")
 
 twoPhase :: IO ()
 twoPhase = initGame
-       -- >>= phase1
+       >>= phase1
        >>= phase2 2
        >>= endGame
 
 threePhase :: IO ()
 threePhase = initGame
-        -- >>= phase1
+        >>= phase1
         >>= phase2 3
         >>= phase3
         >>= endGame
