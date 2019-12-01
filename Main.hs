@@ -15,7 +15,7 @@ checkBoard b =
 
 initGame :: IO Board
 initGame =
-    do b <- checkBoard testMillBoard5 -- standardBoard
+    do b <- checkBoard standardBoard
        if playerMaxPins <= 0
        then fail "playerMaxPins not greater than 0."
        else do printBoard b
